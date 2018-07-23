@@ -18,8 +18,8 @@ func numDistinct(s string, t string) int {
 	lenT := len(t) + 1
 	dp := make([][]int, 0)
 
-	for i := 0; i < lenT; i++ {
-		tmp := make([]int, lenS)
+	for i := 0; i < lenT; i++ { //golang中不支持变量作为数组容量定义，因此采用此方法
+		tmp := make([]int, lenS) //定义一个刹大小为lenT，lenS的二维数组
 		dp = append(dp, tmp)
 	}
 
