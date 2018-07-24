@@ -12,23 +12,23 @@ func main() {
 	printTree(tree)
 }
 
-func createBinaryTree(arr []int, index int) *model.TreeNode {
+func createBinaryTree(arr []int, index int) *model.TreeLinkNode {
 	if index >= len(arr) {
 		return nil
 	}
-	node := &model.TreeNode{arr[index], nil, nil, nil}
+	node := &model.TreeLinkNode{arr[index], nil, nil, nil}
 	node.Left = createBinaryTree(arr, 2*index+1)
 	node.Right = createBinaryTree(arr, 2*index+2)
 
 	return node
 }
 
-func printTree(root *model.TreeNode) {
+func printTree(root *model.TreeLinkNode) {
 	if root == nil {
 		return
 	}
-	slice1 := make([]*model.TreeNode, 0)
-	slice2 := make([]*model.TreeNode, 0)
+	slice1 := make([]*model.TreeLinkNode, 0)
+	slice2 := make([]*model.TreeLinkNode, 0)
 
 	slice1 = append(slice1, root)
 	for len(slice1) > 0 {
@@ -53,7 +53,7 @@ func printTree(root *model.TreeNode) {
 	}
 }
 
-func populateNext(root *model.TreeNode) {
+func populateNext(root *model.TreeLinkNode) {
 	if root == nil {
 		return
 	}

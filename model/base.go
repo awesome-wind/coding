@@ -1,6 +1,6 @@
 package model
 
-type TreeNode struct {
+type TreeLinkNode struct {
 	Val               int
-	Left, Right, Next *TreeNode
+	Left, Right, Next *TreeLinkNode
 }
