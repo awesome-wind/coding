@@ -25,6 +25,7 @@ int main() {
         thread_pool.add_task(test_func);
     }
 
-    getchar();
+    // getchar();
+    std::this_thread::sleep_for(std::chrono::seconds(20));
     return 0;
 }

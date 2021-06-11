@@ -1,0 +1,20 @@
+name: Hello World
+on: push
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+    - name: Run a single-line script
+      run: echo "Hello World!"
+    - name: Run a multi-line script
+      env:
+        MY_VAR: build the basic thread pool
+      run: |
+        echo $MY_VAR
+        cd basic_skills/thread_pool/basic
+        sh build.sh
+        ./example
+        
