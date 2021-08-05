@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "dense_graph.h"
+#include "path.h"
 #include "read_graph.h"
 #include "sparse_graph.h"
 
@@ -54,4 +55,7 @@ int main() {
     SparseGraph sparse_graph(11, false);
     ReadGraph<SparseGraph> graph2(sparse_graph, filename);
     sparse_graph.show();
+
+    Path<DenseGraph> path(dense_graph, 3);
+    path.show_path(10);
 }
