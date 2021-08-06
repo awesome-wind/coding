@@ -1,0 +1,1 @@
+list(APPEND CMAKE_PREFIX_PATH "${PROJECT_PATH}/gtest/lib/cmake/GTest")

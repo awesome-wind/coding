@@ -3,18 +3,18 @@ on: push
 jobs:
   my_first_job:
     name: My first job
-    runs-on: ubuntu-latest
+    runs-on: macos-latest # ubuntu-latest 
     steps:
     - name: checkout
       uses: actions/checkout@master
-    - name: Run a single-line script
-      run: echo "Hello World!"
-    - name: Run a multi-line script
+    - name: build and run
       env:
-        MY_VAR: build the basic thread pool
+        MY_VAR: build and run my project
       run: |
         echo $MY_VAR
-        cd basic_skills/thread_pool/basic
-        sh build.sh
-        ./example
+        cd basic_skills
+        cmake -Bbuild .
+        cd build
+        make -j12
+        ./main
         
