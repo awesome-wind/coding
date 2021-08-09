@@ -32,7 +32,8 @@ void ThreadPool::start() {
 
     threads_.reserve(thread_size_);
     for (int i = 0; i < thread_size_; i++) {
-        threads_.push_back(new std::thread(std::bind(&ThreadPool::thread_loop, this)));
+        // threads_.push_back(new std::thread(std::bind(&ThreadPool::thread_loop, this)));
+        threads_.push_back(new std::thread(&ThreadPool::thread_loop, this));
     }
 }
 

@@ -302,20 +302,20 @@ int run_binary_tree() {
         std::cout << std::endl;
 
         // test SST
-        startTime = clock();
-        SequenceST<std::string, int> sst = SequenceST<std::string, int>();
-        for (std::vector<std::string>::iterator iter = words.begin(); iter != words.end(); iter++) {
-            int* res = sst.search(*iter);
-            if (res == NULL)
-                sst.insert(*iter, 1);
-            else
-                (*res)++;
-        }
+        // startTime = clock();
+        // SequenceST<std::string, int> sst = SequenceST<std::string, int>();
+        // for (std::vector<std::string>::iterator iter = words.begin(); iter != words.end(); iter++) {
+        //     int* res = sst.search(*iter);
+        //     if (res == NULL)
+        //         sst.insert(*iter, 1);
+        //     else
+        //         (*res)++;
+        // }
 
-        std::cout << "'god' : " << *sst.search("god") << std::endl;
+        // std::cout << "'god' : " << *sst.search("god") << std::endl;
 
-        endTime = clock();
-        std::cout << "SST , time: " << double(endTime - startTime) / CLOCKS_PER_SEC << " s." << std::endl;
+        // endTime = clock();
+        // std::cout << "SST , time: " << double(endTime - startTime) / CLOCKS_PER_SEC << " s." << std::endl;
     }
 
     return 0;
