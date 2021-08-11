@@ -1,6 +1,6 @@
-#include "leetcode/leetcode.h"
-
 #include <iostream>
+
+#include "leetcode/leetcode.h"
 
 bool LeetCode::is_match(std::string& s, std::string& p) {
     while (s.size() && p.size() && p.back() != '*') {

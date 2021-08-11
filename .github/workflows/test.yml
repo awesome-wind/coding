@@ -12,7 +12,6 @@ jobs:
         MY_VAR: build and run my project
       run: |
         echo $MY_VAR
-        cd basic_skills
         cmake -Bbuild .
         cd build
         make -j12

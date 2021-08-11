@@ -17,11 +17,14 @@ include_directories("${PROJECT_PATH}/include")
 
 set(src_files
     main.cpp 
-    test.cpp 
+    skills_test.cpp
+    leetcode_test.cpp
     binary_tree/binary_tree.cpp 
     thread_pool/basic/thread_pool.cpp
     graph/graph.cpp
-    leetcode/leetcode.cpp
+    leetcode/is_match.cpp
+    leetcode/merge_lists.cpp
+    leetcode/tools.cpp
 )
 
 add_executable(main ${src_files})

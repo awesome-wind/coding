@@ -25,22 +25,6 @@ TEST(GraphTest, graph) {
     EXPECT_EQ(graph(), 0);
 }
 
-TEST(LeetCodeTest, wildcard_test) {
-    std::unique_ptr<LeetCode> code = std::make_unique<LeetCode>();
-
-    std::string s = "abcdefgh";
-    std::string p = "ab?c*f?h";
-    EXPECT_FALSE(code->is_match(s, p));
-
-    s = "abcdefgh";
-    p = "a*m*gh";
-    EXPECT_FALSE(code->is_match(s, p));
-
-    s = "abcdefgh";
-    p = "a?c*?h";
-    EXPECT_TRUE(code->is_match(s, p));
-}
-
 TEST(ThreadPoolTest, thread_pool) {
     thread_pool::ThreadPool thread_pool;
 
