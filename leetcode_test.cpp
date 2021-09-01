@@ -1,5 +1,7 @@
 #include "leetcode/leetcode.h"
 
+#include <memory>
+
 #include "gtest/gtest.h"
 #include "leetcode/tools.h"
 
@@ -87,4 +89,23 @@ TEST(LeetCodeTest, merge_k_sorted_lists) {
     //     res2 = res2->next;
     //     ans2 = ans2->next;
     // }
+}
+
+TEST(LeetCodeTest, permute_test) {
+    std::unique_ptr<LeetCode> code = std::make_unique<LeetCode>();
+    std::vector<int> nums = {1, 2, 3};
+    auto res = code->permute(nums, false);
+    show_two_dimensional_vector("simple permute", res);
+
+    int res_size = 1;
+    for (int i = 1; i <= nums.size(); i++) {
+        res_size *= i;
+    }
+
+    EXPECT_EQ(res.size(), res_size);
+
+    nums = {1, 1, 2};
+    res = code->permute(nums, true);
+    show_two_dimensional_vector("permute with repeated num", res);
+    EXPECT_EQ(res.size(), 3);
 }

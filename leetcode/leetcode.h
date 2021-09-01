@@ -21,4 +21,8 @@ public:
 
     // https://leetcode-cn.com/problems/merge-k-sorted-lists/
     ListNode* merge_lists(std::vector<ListNode*>& lists, int mode);
+
+    // https://leetcode-cn.com/problems/permutations/
+    // https://leetcode-cn.com/problems/permutations-ii/
+    std::vector<std::vector<int>> permute(std::vector<int> nums, bool repeat);
 };

@@ -25,6 +25,7 @@ set(src_files
     leetcode/is_match.cpp
     leetcode/merge_lists.cpp
     leetcode/tools.cpp
+    leetcode/permute.cpp
 )
 
 add_executable(main ${src_files})
