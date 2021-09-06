@@ -25,4 +25,6 @@ public:
     // https://leetcode-cn.com/problems/permutations/
     // https://leetcode-cn.com/problems/permutations-ii/
     std::vector<std::vector<int>> permute(std::vector<int> nums, bool repeat);
+
+    void rotate(std::vector<std::vector<int>>& image, int mode);
 };

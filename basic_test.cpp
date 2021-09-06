@@ -1,5 +1,7 @@
+#include <cmath>
 #include <thread>
 
+#include "basic/base/base.h"
 #include "binary_tree/binary_tree.h"
 #include "graph/graph.h"
 #include "gtest/gtest.h"
@@ -34,4 +36,13 @@ TEST(ThreadPoolTest, thread_pool) {
 
     // getchar();
     std::this_thread::sleep_for(std::chrono::seconds(3));
+}
+
+TEST(BaseTest, async_access) {
+    std::unique_ptr<Base> base = std::make_unique<Base>();
+
+    int k = 6;
+    EXPECT_EQ(base->promise_task(k), std::pow(2, k));
+    EXPECT_EQ(base->packaged_task(k), std::pow(2, k));
+    EXPECT_EQ(base->async_task(k), std::pow(2, k));
 }

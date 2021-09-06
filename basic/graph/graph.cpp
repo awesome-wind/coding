@@ -50,7 +50,7 @@ int graph() {
     // }
 
     DenseGraph dense_graph(11, false);
-    std::string filename = "../graph/test.txt";
+    std::string filename = "../basic/graph/test.txt";
     ReadGraph<DenseGraph> graph1(dense_graph, filename);
     dense_graph.show();
 

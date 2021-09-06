@@ -109,3 +109,17 @@ TEST(LeetCodeTest, permute_test) {
     show_two_dimensional_vector("permute with repeated num", res);
     EXPECT_EQ(res.size(), 3);
 }
+
+TEST(LeetCodeTest, rotate_test) {
+    std::unique_ptr<LeetCode> code = std::make_unique<LeetCode>();
+    std::vector<std::vector<int>> image1 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+    std::vector<std::vector<int>> image2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+
+    EXPECT_EQ(image1, image2);
+
+    code->rotate(image1, 1);
+    show_two_dimensional_vector("rotate image1", image1);
+    code->rotate(image2, 2);
+    show_two_dimensional_vector("rotate image2", image2);
+    EXPECT_EQ(image1, image2);
+}

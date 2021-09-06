@@ -2,7 +2,7 @@ name: Hello World
 on: push
 jobs:
   my_first_job:
-    name: My first job
+    name: C++
     runs-on: macos-latest # ubuntu-latest 
     steps:
     - name: checkout
@@ -15,5 +15,5 @@ jobs:
         cmake -Bbuild .
         cd build
         make -j12
-        ./main
+        ./main_test
         
